@@ -10,6 +10,7 @@ namespace mastermind
     {
         private List<string> probak = new List<string>();
         public List<string> visszajelzesek = new List<string>();
+        public List<string> segitsegek = new List<string>();
         private string feladvany;
         /// <summary>
         /// a játék előkészítését végző konstruktor
@@ -24,6 +25,7 @@ namespace mastermind
             int sotet = 0;
             int vilagos = 0;
             char betu=' ';
+            string segitsegsor = "";
             string visszajelzes = "";
             probak.Add(tipp);
             for (int i = 0; i < feladvany.Length; i++)
