@@ -107,6 +107,12 @@ namespace mastermind
                 }
             }
 
+            List<char> egyszerSem = EgyszerSemSzerepeltSzinek();
+            foreach (char c in egyszerSem) {    // azokat is ki kell venni, amik egy tipp-ben se voltak benne
+                if (szinek.Contains(c))
+                    szinek.Remove(c);
+            }
+
             return szinek.ToList(); // a megmaradt szinek azok, amelyek csak szinhelyesen szerepeltek
         }
 
@@ -114,7 +120,7 @@ namespace mastermind
         /// Megadja, hogy az utolsó lépés 
         /// </summary>
         /// <returns></returns>
-       /* public int UtolsoLepesLehetosegei() {
+        /*public int UtolsoLepesLehetosegei() {
 
         }*/
     }
