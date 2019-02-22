@@ -35,6 +35,7 @@ namespace mastermind
             MenuElem modositottzsurime = new MenuElem(modositottgep, "Zsűri által megadott feladvány");
 
             MenuElem vissza = new MenuElem(fm, "vissza");
+            MenuElem vissza2 = new MenuElem(fm, "vissza");
             MenuElem kilep = new MenuElem(() => fm.Bezar(), "Kilépés");
 
             fm.HozzaadMenuElem(eredetime);
@@ -48,7 +49,7 @@ namespace mastermind
             modositott.HozzaadMenuElem(modositottgepme);
             modositott.HozzaadMenuElem(modositottlathatme);
             modositott.HozzaadMenuElem(modositottzsurime);
-            modositott.HozzaadMenuElem(vissza);
+            modositott.HozzaadMenuElem(vissza2);
 
 
 
