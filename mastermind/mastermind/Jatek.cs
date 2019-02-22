@@ -55,5 +55,25 @@ namespace mastermind
             visszajelzesek.Add(visszajelzes);
                 return visszajelzes;
         }
+
+        private string segitseg = "";
+        public string Segitsegadas()
+        {
+            if (probak.Count < 6)
+            {
+                return "";
+            }
+            else if (segitseg == "")
+            {
+                for (int i = 0; i < probak.Count; i++)
+                {
+                    
+                    segitseg = probak[i] + "\n" + visszajelzesek[i];
+                }
+                return segitseg;
+            }
+            return "";
+            
+        }
     }
 }
