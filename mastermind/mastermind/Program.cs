@@ -10,6 +10,7 @@ namespace mastermind
     {
         static void Main(string[] args) {
 
+
             Menu fm = new Menu();
 
             Menu eredeti = new Menu();
@@ -27,12 +28,246 @@ namespace mastermind
             MenuElem eredetime = new MenuElem(eredeti, "Eredeti változat");
             MenuElem modositottme = new MenuElem(modositott, "Módosított változat");
 
-            MenuElem eredetigepme = new MenuElem(eredetigep, "Gép által sorsolt feladvány");
-            MenuElem eredetilathatme = new MenuElem(eredetigep, "Gép által sorsolt feladvány látható kisorsolt színsorral");
-            MenuElem eredetizsurime = new MenuElem(eredetigep, "Zsűri által megadott feladvány");
-            MenuElem modositottgepme = new MenuElem(modositottgep, "Gép által sorsolt feladvány");
-            MenuElem modositottlathatme = new MenuElem(modositottgep, "Gép által sorsolt feladvány látható kisorsolt színsorral");
-            MenuElem modositottzsurime = new MenuElem(modositottgep, "Zsűri által megadott feladvány");
+            List<char> Feladvany = new List<char>();
+
+
+            MenuElem eredetigepme = new MenuElem(() => { Console.Clear();
+                for(int i=0;i<4;i++)
+                {
+                Feladvany.Add('A'); Feladvany.Add('B'); Feladvany.Add('C'); Feladvany.Add('D'); Feladvany.Add('E'); Feladvany.Add('F'); Feladvany.Add('G');
+                }
+
+                Feladvany.Kever();
+
+
+                var stringFeladvany = String.Concat(Feladvany);
+                /*String.Concat(
+                Feladvany.Where(c => Feladvany.Contains(c))); */
+
+                
+                stringFeladvany = stringFeladvany.Substring(0, 4);
+                Jatek jatek = new Jatek(stringFeladvany);
+                string probalkozas = "";
+                for(int i=0;i<10;i++)
+                {   
+
+                    probalkozas = Console.ReadLine();
+                    
+                    if(probalkozas == "s")
+                    {
+                        jatek.Segitsegadas();
+                        i--;
+                    }
+                     else
+                    {
+                        Console.WriteLine(jatek.Proba(probalkozas));
+                    }
+                        
+                        
+
+
+                }
+            } , "Gép által sorsolt feladvány");
+
+
+
+
+
+            MenuElem eredetilathatme = new MenuElem(() => { Console.Clear();
+
+                for (int i = 0; i < 4; i++)
+                {
+                    Feladvany.Add('A'); Feladvany.Add('B'); Feladvany.Add('C'); Feladvany.Add('D'); Feladvany.Add('E'); Feladvany.Add('F'); Feladvany.Add('G');
+                }
+                Feladvany.Kever();
+                var stringFeladvany = String.Concat(
+                Feladvany.Where(c => Feladvany.Contains(c)));
+                string vegfeladvany = stringFeladvany.Substring(0, 4);
+                Jatek jatek = new Jatek(vegfeladvany);
+                string probalkozas = "";
+                Console.WriteLine("A gép által generált feladvány: ");
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.Write(vegfeladvany);
+                Console.ResetColor();
+                Console.WriteLine();
+
+                for (int i = 0; i < 10; i++)
+                {
+
+                    probalkozas = Console.ReadLine();
+
+                    if (probalkozas == "s")
+                    {
+                        jatek.Segitsegadas();
+                        i--;
+                    }
+                    else
+                    {
+                        Console.WriteLine(jatek.Proba(probalkozas));
+                    }
+
+
+
+
+                }
+
+            }, "Gép által sorsolt feladvány látható színsorral");
+
+
+
+
+            MenuElem eredetizsurime = new MenuElem(() => { Console.Clear();
+
+                Console.WriteLine("Írd be, hogy mi legyen a látható feladvány: ");
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                string stringFeladvany = Console.ReadLine();
+                Console.ResetColor();
+                Feladvany.Add(stringFeladvany[0]);
+                Feladvany.Add(stringFeladvany[1]);
+                Feladvany.Add(stringFeladvany[2]);
+                Feladvany.Add(stringFeladvany[3]);
+                Jatek jatek = new Jatek(stringFeladvany);
+                string probalkozas = "";
+                for (int i = 0; i < 10; i++)
+                {
+
+                    probalkozas = Console.ReadLine();
+
+                    if (probalkozas == "s")
+                    {
+                        jatek.Segitsegadas();
+                        i--;
+                    }
+                    else
+                    {
+                        Console.WriteLine(jatek.Proba(probalkozas));
+                    }
+
+
+
+
+                }
+
+
+
+
+            }, "Zsűri által sorsolt feladvány");
+
+
+
+
+
+            MenuElem modositottgepme = new MenuElem(() => { Console.Clear();
+                Feladvany.Add('A'); Feladvany.Add('B'); Feladvany.Add('C'); Feladvany.Add('D'); Feladvany.Add('E'); Feladvany.Add('F'); Feladvany.Add('G');
+                Feladvany.Kever();
+                var stringFeladvany = String.Concat(
+                Feladvany.Where(c => Feladvany.Contains(c)));
+                string vegfeladvany = stringFeladvany.Substring(0, 4);
+                Jatek jatek = new Jatek(vegfeladvany);
+                string probalkozas = "";
+                for (int i = 0; i < 10; i++)
+                {
+
+                    probalkozas = Console.ReadLine();
+
+                    if (probalkozas == "s")
+                    {
+                        jatek.Segitsegadas();
+                        i--;
+                    }
+                    else
+                    {
+                        Console.WriteLine(jatek.Proba(probalkozas));
+                    }
+
+
+
+
+                }
+
+
+
+            }, "Gép által sorsolt feladvány");
+
+
+
+
+
+            MenuElem modositottlathatme = new MenuElem(() => { Console.Clear();
+
+                Feladvany.Add('A'); Feladvany.Add('B'); Feladvany.Add('C'); Feladvany.Add('D'); Feladvany.Add('E'); Feladvany.Add('F'); Feladvany.Add('G');
+                Feladvany.Kever();
+                var stringFeladvany = String.Concat(
+                Feladvany.Where(c => Feladvany.Contains(c)));
+                string vegfeladvany = stringFeladvany.Substring(0, 4);
+                Jatek jatek = new Jatek(vegfeladvany);
+                string probalkozas = "";
+                Console.WriteLine("A gép által generált feladvány: ");
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.Write(vegfeladvany);
+                Console.ResetColor();
+                Console.WriteLine();
+
+                for (int i = 0; i < 10; i++)
+                {
+
+                    probalkozas = Console.ReadLine();
+
+                    if (probalkozas == "s")
+                    {
+                        jatek.Segitsegadas();
+                        i--;
+                    }
+                    else
+                    {
+                        Console.WriteLine(jatek.Proba(probalkozas));
+                    }
+
+
+
+
+                }
+
+
+            }, "Gép által sorsolt feladvány látható színsorral");
+
+
+
+
+            MenuElem modositottzsurime = new MenuElem(() => { Console.Clear();
+
+
+                Console.WriteLine("Írd be, hogy mi legyen a látható feladvány: ");
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                string stringFeladvany = Console.ReadLine();
+                Console.ResetColor();
+                Feladvany.Add(stringFeladvany[0]);
+                Feladvany.Add(stringFeladvany[1]);
+                Feladvany.Add(stringFeladvany[2]);
+                Feladvany.Add(stringFeladvany[3]);
+                Jatek jatek = new Jatek(stringFeladvany);
+                string probalkozas = "";
+                for (int i = 0; i < 10; i++)
+                {
+
+                    probalkozas = Console.ReadLine();
+
+                    if (probalkozas == "s")
+                    {
+                        jatek.Segitsegadas();
+                        i--;
+                    }
+                    else
+                    {
+                        Console.WriteLine(jatek.Proba(probalkozas));
+                    }
+                }
+
+            }, "Zsűri által megadott feladvány");
+
+
+
+
 
             MenuElem vissza = new MenuElem(fm, "vissza");
             MenuElem vissza2 = new MenuElem(fm, "vissza");
@@ -51,15 +286,7 @@ namespace mastermind
             modositott.HozzaadMenuElem(modositottzsurime);
             modositott.HozzaadMenuElem(vissza2);
 
-
-
             fm.Megnyit();
-
-            
-
-
-
-
 
         }
     }
@@ -180,6 +407,8 @@ namespace mastermind
                 menu.Bezar();
                 masikMenu.Megnyit();
             };
+
+            
         }
 
         public MenuElem(Feladat f, string szov)
@@ -187,6 +416,8 @@ namespace mastermind
             amikorKivalaszt = f;
             szoveg = szov;
         }
+
+       
 
         public void Kivalaszt()
         {
