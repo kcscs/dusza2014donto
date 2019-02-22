@@ -11,7 +11,7 @@ namespace mastermind
         private List<string> probak = new List<string>();
         public List<string> visszajelzesek = new List<string>();
         private string feladvany;
-        string visszajelzes = "";
+        public string visszajelzes = "";
         /// <summary>
         /// a játék előkészítését végző konstruktor
         /// </summary>
