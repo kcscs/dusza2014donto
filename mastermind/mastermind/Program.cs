@@ -62,11 +62,36 @@ namespace mastermind
                     {
                         Console.WriteLine(jatek.Proba(probalkozas));
                     }
-                        
-                        
 
 
+
+                        
                 }
+                for(int i=0;i<jatek.TobbszorSzereplok().Count;i++)
+                {
+                    Console.Write(jatek.TobbszorSzereplok()[i] +" ");
+                }
+                Console.WriteLine();
+                for(int i=0;i<jatek.UtolsoTippnelJoSzinek().Count;i++)
+                {
+                    Console.Write(jatek.UtolsoTippnelJoSzinek()[i] + " ");
+                }
+                Console.WriteLine();
+                for(int i=0;i<jatek.HanyadikTippelesnelJoEloszor().Length;i++)
+                {
+                    Console.Write(jatek.HanyadikTippelesnelJoEloszor()[i] + " ");
+                }
+                Console.WriteLine();
+                for(int i=0;i<jatek.EgyszerSemSzerepeltSzinek().Count;i++)
+                {
+                    Console.Write(jatek.EgyszerSemSzerepeltSzinek()[i] + " ");
+                }
+                Console.WriteLine();
+                for(int i=0;i<jatek.CsakSzinhelyesenSzerepelt().Count;i++)
+                {
+                    Console.Write(jatek.CsakSzinhelyesenSzerepelt()[i] + " ");
+                }
+                Console.WriteLine();
             } , "Gép által sorsolt feladvány");
 
 
@@ -107,9 +132,33 @@ namespace mastermind
                     }
 
 
-
-
                 }
+
+                for (int i = 0; i < jatek.TobbszorSzereplok().Count; i++)
+                {
+                    Console.Write(jatek.TobbszorSzereplok()[i] + " ");
+                }
+                Console.WriteLine();
+                for (int i = 0; i < jatek.UtolsoTippnelJoSzinek().Count; i++)
+                {
+                    Console.Write(jatek.UtolsoTippnelJoSzinek()[i] + " ");
+                }
+                Console.WriteLine();
+                for (int i = 0; i < jatek.HanyadikTippelesnelJoEloszor().Length; i++)
+                {
+                    Console.Write(jatek.HanyadikTippelesnelJoEloszor()[i] + " ");
+                }
+                Console.WriteLine();
+                for (int i = 0; i < jatek.EgyszerSemSzerepeltSzinek().Count; i++)
+                {
+                    Console.Write(jatek.EgyszerSemSzerepeltSzinek()[i] + " ");
+                }
+                Console.WriteLine();
+                for (int i = 0; i < jatek.CsakSzinhelyesenSzerepelt().Count; i++)
+                {
+                    Console.Write(jatek.CsakSzinhelyesenSzerepelt()[i] + " ");
+                }
+                Console.WriteLine();
 
             }, "Gép által sorsolt feladvány látható színsorral");
 
@@ -147,7 +196,31 @@ namespace mastermind
 
 
                 }
-
+                for (int i = 0; i < jatek.TobbszorSzereplok().Count; i++)
+                {
+                    Console.Write(jatek.TobbszorSzereplok()[i] + " ");
+                }
+                Console.WriteLine();
+                for (int i = 0; i < jatek.UtolsoTippnelJoSzinek().Count; i++)
+                {
+                    Console.Write(jatek.UtolsoTippnelJoSzinek()[i] + " ");
+                }
+                Console.WriteLine();
+                for (int i = 0; i < jatek.HanyadikTippelesnelJoEloszor().Length; i++)
+                {
+                    Console.Write(jatek.HanyadikTippelesnelJoEloszor()[i] + " ");
+                }
+                Console.WriteLine();
+                for (int i = 0; i < jatek.EgyszerSemSzerepeltSzinek().Count; i++)
+                {
+                    Console.Write(jatek.EgyszerSemSzerepeltSzinek()[i] + " ");
+                }
+                Console.WriteLine();
+                for (int i = 0; i < jatek.CsakSzinhelyesenSzerepelt().Count; i++)
+                {
+                    Console.Write(jatek.CsakSzinhelyesenSzerepelt()[i] + " ");
+                }
+                Console.WriteLine();
 
 
 
@@ -184,7 +257,31 @@ namespace mastermind
 
 
                 }
-
+                for (int i = 0; i < jatek.TobbszorSzereplok().Count; i++)
+                {
+                    Console.Write(jatek.TobbszorSzereplok()[i] + " ");
+                }
+                Console.WriteLine();
+                for (int i = 0; i < jatek.UtolsoTippnelJoSzinek().Count; i++)
+                {
+                    Console.Write(jatek.UtolsoTippnelJoSzinek()[i] + " ");
+                }
+                Console.WriteLine();
+                for (int i = 0; i < jatek.HanyadikTippelesnelJoEloszor().Length; i++)
+                {
+                    Console.Write(jatek.HanyadikTippelesnelJoEloszor()[i] + " ");
+                }
+                Console.WriteLine();
+                for (int i = 0; i < jatek.EgyszerSemSzerepeltSzinek().Count; i++)
+                {
+                    Console.Write(jatek.EgyszerSemSzerepeltSzinek()[i] + " ");
+                }
+                Console.WriteLine();
+                for (int i = 0; i < jatek.CsakSzinhelyesenSzerepelt().Count; i++)
+                {
+                    Console.Write(jatek.CsakSzinhelyesenSzerepelt()[i] + " ");
+                }
+                Console.WriteLine();
 
 
             }, "Gép által sorsolt feladvány");
@@ -227,7 +324,31 @@ namespace mastermind
 
 
                 }
-
+                for (int i = 0; i < jatek.TobbszorSzereplok().Count; i++)
+                {
+                    Console.Write(jatek.TobbszorSzereplok()[i] + " ");
+                }
+                Console.WriteLine();
+                for (int i = 0; i < jatek.UtolsoTippnelJoSzinek().Count; i++)
+                {
+                    Console.Write(jatek.UtolsoTippnelJoSzinek()[i] + " ");
+                }
+                Console.WriteLine();
+                for (int i = 0; i < jatek.HanyadikTippelesnelJoEloszor().Length; i++)
+                {
+                    Console.Write(jatek.HanyadikTippelesnelJoEloszor()[i] + " ");
+                }
+                Console.WriteLine();
+                for (int i = 0; i < jatek.EgyszerSemSzerepeltSzinek().Count; i++)
+                {
+                    Console.Write(jatek.EgyszerSemSzerepeltSzinek()[i] + " ");
+                }
+                Console.WriteLine();
+                for (int i = 0; i < jatek.CsakSzinhelyesenSzerepelt().Count; i++)
+                {
+                    Console.Write(jatek.CsakSzinhelyesenSzerepelt()[i] + " ");
+                }
+                Console.WriteLine();
 
             }, "Gép által sorsolt feladvány látható színsorral");
 
@@ -262,6 +383,31 @@ namespace mastermind
                         Console.WriteLine(jatek.Proba(probalkozas));
                     }
                 }
+                for (int i = 0; i < jatek.TobbszorSzereplok().Count; i++)
+                {
+                    Console.Write(jatek.TobbszorSzereplok()[i] + " ");
+                }
+                Console.WriteLine();
+                for (int i = 0; i < jatek.UtolsoTippnelJoSzinek().Count; i++)
+                {
+                    Console.Write(jatek.UtolsoTippnelJoSzinek()[i] + " ");
+                }
+                Console.WriteLine();
+                for (int i = 0; i < jatek.HanyadikTippelesnelJoEloszor().Length; i++)
+                {
+                    Console.Write(jatek.HanyadikTippelesnelJoEloszor()[i] + " ");
+                }
+                Console.WriteLine();
+                for (int i = 0; i < jatek.EgyszerSemSzerepeltSzinek().Count; i++)
+                {
+                    Console.Write(jatek.EgyszerSemSzerepeltSzinek()[i] + " ");
+                }
+                Console.WriteLine();
+                for (int i = 0; i < jatek.CsakSzinhelyesenSzerepelt().Count; i++)
+                {
+                    Console.Write(jatek.CsakSzinhelyesenSzerepelt()[i] + " ");
+                }
+                Console.WriteLine();
 
             }, "Zsűri által megadott feladvány");
 
