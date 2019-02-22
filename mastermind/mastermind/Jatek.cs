@@ -22,27 +22,32 @@ namespace mastermind
         }
         public string Proba(string tipp)
         {
+            Dictionary<char, int> paratlan = new Dictionary<char, int>();
+
             int sotet = 0;
             int vilagos = 0;
-            char betu=' ';
             string segitsegsor = "";
             string visszajelzes = "";
             probak.Add(tipp);
             for (int i = 0; i < feladvany.Length; i++)
             {
+                if (!paratlan.ContainsKey(feladvany[i]))
+                    paratlan.Add(feladvany[i], 0);
+
                 if (tipp[i] == feladvany[i])
                 {
                     sotet++;
-                    betu = tipp[i];
+                } else {
+                    paratlan[feladvany[i]]++;
                 }
-                for (int j = 0; j < feladvany.Length; j++)
-                {
-                    if (tipp[i] == feladvany[j] && j!=i)
-                    {
-                        if (betu != tipp[i])
-                        {
-                            vilagos++;
-                        }
+                
+            }
+
+            for (int i = 0; i < feladvany.Length; i++) {
+                if(feladvany[i] != tipp[i]) {
+                    if(paratlan.ContainsKey(tipp[i]) && paratlan[tipp[i]] > 0) {
+                        paratlan[tipp[i]]--;
+                        vilagos++;
                     }
                 }
             }
