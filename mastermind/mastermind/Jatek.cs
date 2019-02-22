@@ -9,6 +9,7 @@ namespace mastermind
     partial class Jatek
     {
         private List<string> probak = new List<string>();
+        public List<string> visszajelzesek = new List<string>();
         private string feladvany;
         /// <summary>
         /// a játék előkészítését végző konstruktor
@@ -20,8 +21,39 @@ namespace mastermind
         }
         public string Proba(string tipp)
         {
-            
-            return "";
+            int sotet = 0;
+            int vilagos = 0;
+            char betu=' ';
+            string visszajelzes="";
+            probak.Add(tipp);
+            for (int i = 0; i < feladvany.Length; i++)
+            {
+                if (tipp[i] == feladvany[i])
+                {
+                    sotet++;
+                    betu = tipp[i];
+                }
+                for (int j = 0; j < feladvany.Length; j++)
+                {
+                    if (tipp[i] == feladvany[j] && j!=i)
+                    {
+                        if (betu != tipp[i])
+                        {
+                            vilagos++;
+                        }
+                    }
+                }
+            }
+            for (int i = 0; i < sotet; i++)
+            {
+                visszajelzes += ("s");
+            }
+            for (int j = 0; j < vilagos; j++)
+            {
+                visszajelzes += ("v");
+            }
+            visszajelzesek.Add(visszajelzes);
+                return visszajelzes;
         }
     }
 }
